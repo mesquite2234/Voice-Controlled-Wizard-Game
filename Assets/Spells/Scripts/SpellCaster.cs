@@ -16,7 +16,7 @@ public class SpellCaster : MonoBehaviour
     public float fbDamage = 10;
     public float fbSizeMultiplier = 10;
     public float fbStartSpeed = 10;
-    public float fbDuration = 5f;
+    public float fbDuration = 2.5f;
 
     [Space]
     [Header("Misty Step")]
