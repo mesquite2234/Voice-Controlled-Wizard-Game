@@ -11,13 +11,9 @@ public class SpellRecognizer : MonoBehaviour
 
     private KeywordRecognizer m_Recognizer;
 
-    private MicLoudnessFilter micLoudness;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        micLoudness = GetComponent<MicLoudnessFilter>();
-
         m_Recognizer = new KeywordRecognizer(spellCaster.spellNames.ToArray(), ConfidenceLevel.Low);
         m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
         m_Recognizer.Start();
